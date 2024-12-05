@@ -1,25 +1,3 @@
-let signUp = document.getElementById("signUp");
-let signIn = document.getElementById("signIn");
-let nameInput = document.getElementById("nameInput");
-let title = document.getElementById("title");
-let errorPassword = document.getElementById("errorPassword");
-
-
-signIn.onclick = function() {
-    nameInput.style.maxHeight = "0";
-    title.innerHTML = "Login";
-    signIn.classList.add("disable");
-    signUp.classList.remove("disable");
-}
-
-signUp.onclick = function() {
-    nameInput.style.maxHeight = "60px";
-    title.innerHTML = "Registro";
-    signIn.classList.remove("disable");
-    signUp.classList.add("disable");
-}
-
-// Validacion del formulariow
 function validarFormulario() {
   let nombre = document.getElementById('nombre').value;
   let apellido = document.getElementById('apellido').value;
@@ -49,3 +27,15 @@ function validarFormulario() {
 
   return nombreValido && apellidoValido && emailValido && passwordValido && confirmPassword === password;
 }
+
+const darkModeToggle = document.getElementById('dark-mode-toggle');
+const body = document.body;
+
+darkModeToggle.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+    if (body.classList.contains('dark-mode')) {
+        darkModeToggle.textContent = 'Modo Claro';
+    } else {
+        darkModeToggle.textContent = 'Modo Oscuro';
+    }
+});

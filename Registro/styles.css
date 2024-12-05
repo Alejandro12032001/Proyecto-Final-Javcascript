@@ -1,0 +1,35 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
+  display: flex;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.form-container {
+  text-align: center;
+}
+
+form {
+  margin-bottom: 20px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+/* Estilos para el modo oscuro (se aplicarán con JavaScript) */
+body.dark-mode {
+  background-color: #222;
+  color: #fff;
+}
+
+.container.dark-mode {
+  background-color: #333;
+}
